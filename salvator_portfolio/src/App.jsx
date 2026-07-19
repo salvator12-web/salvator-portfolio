@@ -9,28 +9,26 @@ import ContactMe from "./components/ContactMe";
 import Skills from "./components/Skills";
 
 const App = () => {
-  return (
-    <Router>
-      <div className="flex flex-col min-h-screen">
-        {/* Navbar */}
-        <NavBar />
+ return (
+    <div className="flex flex-col min-h-screen">
+      {/* Navbar */}
+      <NavBar />
 
-        {/* Main Content Area */}
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<AboutMe />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<ContactMe />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
+      {/* Main Content Area */}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutMe />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<ContactMe />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
 
-        {/* Footer (Stays at the bottom) */}
-        <Footer />
-      </div>
-    </Router>
+      {/* Footer (Stays at the bottom) */}
+      <Footer />
+    </div>
   );
 };
 
